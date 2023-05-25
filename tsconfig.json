@@ -5,7 +5,8 @@
     "outDir": "./build",
     "baseUrl": "./src",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "moduleResolution": "nodenext"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
