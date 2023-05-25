@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "target": "es2017",
+    "target": "es2016",
+    "lib": ["es6"],
+    "module": "CommonJS",
     "outDir": "./build",
     "baseUrl": "./src",
     "emitDecoratorMetadata": true,
