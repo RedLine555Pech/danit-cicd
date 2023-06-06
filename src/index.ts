@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import PostsRepository from "./dal/posts/posts.repository";
 import PostsService from "./bll/posts/posts.service";
 import App from "./server/app";
