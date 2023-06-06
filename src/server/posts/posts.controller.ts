@@ -60,8 +60,6 @@ class PostsController {
   ) => {
     try {
       const post: Post = request.body;
-      const t = 10;
-      t = 15;
       logger.info("BODY:" + request.body);
       logger.info("FIELDS:" + request["fields"]);
       const valid = this.postValidator(post);
