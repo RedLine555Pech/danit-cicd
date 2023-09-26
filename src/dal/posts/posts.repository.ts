@@ -3,13 +3,13 @@ import Params from "../../types/params.interface";
 import { Service } from "typedi";
 import { PostEntity } from "../entity/post";
 import { Post } from "../../types/posts.interface";
-import { getManager } from "typeorm";
+import { AppDataSource } from "../../dataSource";
 
 @Service()
 class PostsRepository {
   manager;
   constructor() {
-    this.manager = getManager();
+    this.manager = AppDataSource.manager;
   }
 
   getAllPosts = async (): Promise<Post[]> => {
