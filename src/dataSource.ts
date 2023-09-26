@@ -8,5 +8,5 @@ export const AppDataSource = new DataSource({
   url: "postgres://oxfbiixv:xYd-sxc8-IPWCLferUFiOLdCy2CQyP7M@snuffleupagus.db.elephantsql.com/oxfbiixv",
   entities: [PostEntity, UserEntity],
   synchronize: false,
-  migrations: ["src/dal/migrations/*.ts"],
+  //migrations: ["src/dal/migrations/*.ts"],
 });
