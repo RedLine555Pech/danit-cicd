@@ -9,7 +9,6 @@ class Factory {
   addToList(T: any) {
     console.log(T.constructor.name);
   }
-  getEntityFactory() {}
 }
 const FactoryInstance = new Factory();
 
