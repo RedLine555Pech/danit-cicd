@@ -5,8 +5,9 @@ import PostsController from "./server/posts/posts.controller";
 import AuthController from "./server/auth/auth.controller";
 import Container from "typedi";
 import { createConnection } from "typeorm";
+import { AppDataSource } from "./dataSource";
 
-createConnection().then(() => {
+AppDataSource.initialize().then(() => {
   const app = new App(
     [Container.get(PostsController), Container.get(AuthController)],
     3000

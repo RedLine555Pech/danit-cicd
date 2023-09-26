@@ -3,12 +3,13 @@ import Params from "../../types/params.interface";
 import { Service } from "typedi";
 import { getManager } from "typeorm";
 import { UserEntity } from "../entity/user";
+import { AppDataSource } from "../../dataSource";
 
 @Service()
 class UsersRepository {
   manager;
   constructor() {
-    this.manager = getManager();
+    this.manager = AppDataSource.manager;
   }
 
   getByEmail = async (email: string): Promise<User> => {

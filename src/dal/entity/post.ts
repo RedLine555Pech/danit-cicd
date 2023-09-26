@@ -19,10 +19,6 @@ class Post extends BaseEntity {
   @Column()
   content: string;
 
-  @Column()
-  @Index()
-  category: string;
-
   @Column("simple-array")
   tags: string[];
 

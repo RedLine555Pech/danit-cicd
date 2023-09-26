@@ -5,8 +5,8 @@
   "main": "./build/index.js",
   "scripts": {
     "eslint": "./node_modules/.bin/eslint ./src",
-    "start": "node index.js",
-    "build": "tsc && cp ./package.json ./build/package.json && npm i --prefix ./build",
+    "start": "node ./build/index.js",
+    "build": "tsc",
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:seed": "ts-node ./src/dal/seed",
