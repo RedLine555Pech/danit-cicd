@@ -63,6 +63,9 @@ class App {
   }
 
   private initializeControllers(controllers) {
+    this.app.use("/", (req, res) => {
+      res.send("server is life");
+    });
     controllers.forEach((controller) => {
       this.app.use(controller.path, controller.router);
     });
