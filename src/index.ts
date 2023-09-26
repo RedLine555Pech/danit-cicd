@@ -7,7 +7,6 @@ import Container from "typedi";
 import { createConnection } from "typeorm";
 import { AppDataSource } from "./dataSource";
 
-t = 10;
 AppDataSource.initialize().then(() => {
   const app = new App(
     [Container.get(PostsController), Container.get(AuthController)],
