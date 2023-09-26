@@ -14,9 +14,7 @@ class PostsRepository {
 
   getAllPosts = async (): Promise<Post[]> => {
     const queryBuilder = this.manager.createQueryBuilder("post", "p");
-    const res = await queryBuilder
-      .innerJoinAndSelect("p.author", "a")
-      .getMany();
+    const res = await queryBuilder.getMany();
     console.log(res);
     return res;
   };
